@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">#Team</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create_account">Create Account</string>
+    <string name="sign_in">sign in</string>
+    <string name="sign_in_file_key">com.asq.dev.team.SIGNINKEY</string>
+    <string name="first_time">first_time</string>
+    <string name="contacts_title">#contacts</string>
+    <string name="theme_file_key">com,asq.dev.team.THEMEFILEKEY</string>
+    <string name="theme_key">themeKey</string>
+    <string name="search_contact">Search</string>
 </resources>

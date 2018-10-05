@@ -1,11 +1,36 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme.Dark" parent="Theme.MaterialComponents.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/colorPrimary</item>
+        <item name="android:navigationBarColor">@color/navBackground</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+        <item name="android:textAppearance">@style/DarkThemeText</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="DarkThemeText" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColorPrimary">@color/textColorDark</item>
+    </style>
+
+    <style name="AppTheme.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorWhite</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccentLight</item>
+        <item name="android:navigationBarColor">@color/navBackground</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+        <item name="android:textAppearance">@style/LightThemeText</item>
+        <item name="android:statusBarColor">@color/colorWhite</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="LightThemeText" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColorPrimary">@color/textColorLight</item>
     </style>
 
 </resources>
