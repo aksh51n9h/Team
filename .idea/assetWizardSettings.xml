@@ -65,8 +65,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_round_search" />
-                            <entry key="sourceFile" value="C:\Users\Home\Desktop\Icon\round-search-24px.svg" />
+                            <entry key="outputName" value="ic_round_feedback" />
+                            <entry key="sourceFile" value="C:\Users\Home\Desktop\Icon\round-feedback-24px.svg" />
                           </map>
                         </option>
                       </PersistentState>

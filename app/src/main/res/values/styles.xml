@@ -11,6 +11,7 @@
         <item name="android:fontFamily">@font/product_sans_regular</item>
         <item name="android:textAppearance">@style/DarkThemeText</item>
         <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="DarkThemeText" parent="TextAppearance.MaterialComponents.Body1">
@@ -27,10 +28,18 @@
         <item name="android:textAppearance">@style/LightThemeText</item>
         <item name="android:statusBarColor">@color/colorWhite</item>
         <item name="android:windowLightStatusBar">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="LightThemeText" parent="TextAppearance.MaterialComponents.Body1">
         <item name="android:textColorPrimary">@color/textColorLight</item>
     </style>
 
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/round_drawer_background</item>
+    </style>
 </resources>

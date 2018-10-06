@@ -22,6 +22,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 /**
  * Main activity class
+ * @author Akshay51n9h
  */
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val SIGN_IN_ACTIVITY_RESULT_CODE = 10056
