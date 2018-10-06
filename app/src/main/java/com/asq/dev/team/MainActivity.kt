@@ -20,8 +20,12 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * Main activity class
+ */
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val SIGN_IN_ACTIVITY_RESULT_CODE = 10056
+    private val NAVIGATION_DRAWER = "navigation_drawer"
     private lateinit var sharedPref: SharedPreferences
     private lateinit var auth: FirebaseAuth
 
@@ -68,14 +72,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         bar.setNavigationOnClickListener {
-            sharedPref.edit()
-                    .putBoolean(getString(R.string.theme_key), !darkTheme)
-                    .apply()
-
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
+            openNavigationDrawer()
         }
-
 
     }
 
@@ -85,6 +83,28 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
             }
         }
+    }
+
+    /**
+     * Function to switch between dark theme and light theme.
+     * @param sharedPref
+     * @param darkTheme
+     */
+    private fun changeTheme(sharedPref:SharedPreferences, darkTheme:Boolean){
+        sharedPref.edit()
+                .putBoolean(getString(R.string.theme_key), !darkTheme)
+                .apply()
+
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
+    }
+
+    /**
+     * Function to open navigation drawer.
+     */
+    private fun openNavigationDrawer(){
+        val navigationDrawer = NavigationDrawer.newInstance()
+        navigationDrawer.show(supportFragmentManager, NAVIGATION_DRAWER)
     }
 
     private fun startSignInActivity() {
